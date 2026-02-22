@@ -1,0 +1,45 @@
+﻿# 图片转PDF SKILLS
+
+自行克隆或下载至项目根目录，目录结构如下
+```sh
+your_project_root
+├── .agents
+│   └── skills
+│       └── img_to_pdf
+│           ├── SKILL.md
+│           ├── assets
+│           │   └── test.jpg
+│           ├── reference
+│           └── scripts
+│               └── img_to_pdf.py
+├── .claude
+│   ├── settings.local.json
+│   └── skills
+│       └── img_to_pdf
+│           ├── SKILL.md
+│           ├── assets
+│           │   └── test.jpg
+│           ├── reference
+│           └── scripts
+│               └── img_to_pdf.py
+```
+
+## Claude Code用法
+终端启动claude code
+```sh
+claude --dangerously-skip-permissions
+```
+claude code中输入，小技巧：输入`/`可以用`tab`补全
+```sh
+/img_to_pdf 请你使用该skills，使用虚拟环境，演示图片如何转为pdf
+```
+
+## OpenCode用法
+终端启动opencode
+```sh
+opencode
+```
+提示词
+```sh
+我现在希望把一张图片转为pdf，你能给我演示一下吗
+```
