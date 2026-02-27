@@ -1,4 +1,4 @@
-﻿---
+---
 name: img_to_pdf
 description: Use this skill when the user wants to convert image files (jpg, png, etc.) to PDF documents. It provides a Python script to perform the conversion. It can also demonstrate the usage by setting up an example directory.
 ---
