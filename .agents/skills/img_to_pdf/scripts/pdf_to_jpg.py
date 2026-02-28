@@ -32,7 +32,7 @@ def convert_pdf_to_jpg(input_pdf, output_dir, dpi=200, quality=95, base_name=Non
         print("Error: PDF has no pages.")
         return 1
 
-    scale = max(dpi, 72) / 72
+    scale = dpi / 72
     pad_width = max(3, len(str(page_count)))
 
     try:
@@ -82,6 +82,9 @@ def parse_args():
 
 if __name__ == "__main__":
     args = parse_args()
+    if args.dpi < 1:
+        print("Error: --dpi must be a positive integer.")
+        sys.exit(1)
     if args.quality < 1 or args.quality > 100:
         print("Error: --quality must be between 1 and 100.")
         sys.exit(1)
